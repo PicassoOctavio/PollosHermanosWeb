@@ -1,0 +1,116 @@
+header{
+  height: 4.5rem;
+  background-color: $c-primary;
+  display: flex;
+  z-index: 999;
+  position: fixed;
+  align-items: center;
+  justify-content: center;
+  box-shadow: $c-black 0rem 0.3125rem 0.9375rem 0rem;
+  width: 100%;
+}
+
+.hamburguer{
+  display: none;
+}
+
+.nav-bar ul{
+  display: flex;
+}
+
+li {
+  list-style-type: none;
+}
+
+.nav-bar ul li .nav-button{
+  display: block;
+  color: $c-white;
+  font-weight: bold;
+  font-size: 1.2rem;
+  padding: 0.5rem 0.8rem;
+  border-radius: 0.7rem;
+  transition: 0.2s;
+  margin: 0 1rem;
+  text-decoration: none;
+  background-color: $c-primary;
+  width: 8rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+.nav-bar ul li .nav-button:hover {
+  color: $c-orange;
+}
+.nav-bar ul li .nav-button.active {
+  color: $c-yellow;
+}
+
+@media only screen and (max-width: 900px) {
+
+  .header{
+    padding-left: 2rem;
+    padding-right: 2rem;
+    position: fixed;
+    display: flex;
+    width: 100%;
+    z-index: 999;
+  }
+  
+  .hamburguer{
+    display: flex;
+    flex-direction: column;
+    margin-right: 6rem;
+    cursor: pointer;
+  }
+  .hamburguer .line{
+    width: 2.813rem;
+    height: 0.2rem;
+    background-color: $c-yellow;
+    margin: 6px 0;
+  }
+  .nav-bar{
+    position: absolute;
+    height: 0;
+    top: 4.5rem;
+    left: 0;
+    right: 0;
+    width: 100vw;
+    background-color: $c-primary;
+    transition: 0.5s;
+    overflow: hidden;
+    z-index: 999;
+  }
+
+  .nav-bar ul {
+    display: block;
+    width: fit-content;
+    margin: 1rem auto 0 auto;
+    text-align: center;
+    transition: 0.5s;
+    opacity: 0;
+  }
+
+  .nav-bar ul li .nav-button {
+    margin-bottom: 0.75rem;
+  }
+
+  .nav-bar.active ul {
+    opacity: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .nav-bar ul li .nav-button{
+    margin-top: 0.2rem;
+  }
+
+  .nav-bar.active {
+    height: 12rem;
+    box-shadow: $c-primary 0rem 1.875rem 3.75rem -0.75rem inset, $c-black 0rem 1.125rem 2.25rem -1.125rem inset;
+  }
+
+  header {
+    justify-content: flex-end;
+  }
+}

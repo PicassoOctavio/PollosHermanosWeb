@@ -1,0 +1,15 @@
+@import 'typography';
+@import 'variables';
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Montserrat";
+  font-weight: regular;
+}
+
+body {
+  overflow-y: scroll;
+  overflow-x: hidden;
+  background-color: $c-white;
+}

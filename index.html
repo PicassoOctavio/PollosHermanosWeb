@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Los Pollos Hermanos</title>
+
+    <!-- favicon -->
+    <link
+      rel="icon"
+      type="image/svg+xml"
+      href="./src/assets/images/header/lph-logo.png"
+    />
+    <!-- google fonts icons -->
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+    />
+
+    <!-- linking SwiperJs Css -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+  </head>
+  <body>
+    <header class="header">
+      <div class="hamburguer">
+        <div class="line"></div>
+        <div class="line"></div>
+        <div class="line"></div>
+      </div>
+
+      <nav class="nav-bar">
+        <ul class="nav-list">
+          <li>
+            <a type="button" class="nav-button" id="infoButton"> Info </a>
+          </li>
+          <li>
+            <a type="button" class="nav-button" id="menuButton"> Menu </a>
+          </li>
+          <li>
+            <a type="button" class="nav-button" id="locationButton">
+              Location
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <!-- Hero section -->
+    <section class="hero">
+      <h1 class="main-title">Order fried chicken now</h1>
+      <div class="logo-container">
+        <img
+          class="logo"
+          src="src/assets/images/header/lph-logo.png"
+          alt="Los pollos hermanos logo"
+        />
+      </div>
+      <h1 class="subtitle">Get famous chicken however you want it.</h1>
+      <button class="cta-button" role="button">Order now</button>
+      <video
+        autoplay
+        loop
+        muted
+        plays-inline
+        src="./src/assets/videos/hero-video.mp4"
+        type="video/mp4"
+        class="back-video"
+      ></video>
+    </section>
+
+    <!-- Menu section -->
+    <section class="menu-section">
+      <h1 class="menu-title">Our Menu</h1>
+      <h4 class="menu-subtitle">
+        Menu varies by location. Please contact your local restaurant to verify
+        menu availability.
+      </h4>
+      <div class="menu">
+        <div class="container swiper">
+          <div class="card-wrapper">
+            <ul class="card-list swiper-wrapper" id="menuList"></ul>
+            <!-- slider pagination -->
+            <div class="swiper-pagination"></div>
+
+            <!-- slider buttons -->
+            <div class="swiper-slide-button swiper-button-prev"></div>
+            <div class="swiper-slide-button swiper-button-next"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="location-section">
+      <div class="description-container">
+        <h1 class="location-title">
+          New Los Pollos Hermanos restaurant in Madrid!
+        </h1>
+        <p class="location-description">
+          The first establishment in Spain to incorporate the new company image.
+          The restaurants sporting the new image have been warmly welcomed by
+          the public, with growth above 30% in those premises with the new Los
+          Pollos Hermanos identity. Los Pollos Hermanos, flagship brand of Eat
+          Out restoration group, announced the opening its first restaurant in
+          Madrid, at Puerta de Alcalá.
+        </p>
+        <p class="direction">
+          C. de Valenzuela, 4, Retiro, 28014 Madrid, España
+        </p>
+        <a
+          class="cta-button"
+          href="https://maps.app.goo.gl/U8HiSWcT8NvUq1Tt8"
+          role="button"
+          target="_blank"
+          >Get directions</a
+        >
+      </div>
+
+      <!-- I actually tried to create the API key for Google Maps, but it asked for a payment method that was rejected (debit card) in order to continue and display the Google Maps. :( -->
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d759.3863202510491!2d-3.6891200000000013!3d40.418923199999995!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd42289b8d392581%3A0x32bfed1206105c2b!2sC.%20de%20Valenzuela%2C%204%2C%20Retiro%2C%2028014%20Madrid%2C%20Espa%C3%B1a!5e0!3m2!1ses-419!2sar!4v1727365379701!5m2!1ses-419!2sar"
+        width="100%"
+        class="map"
+        height="100%"
+        style="border: 0"
+        allowfullscreen=""
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"
+      ></iframe>
+    </section>
+
+    <section class="partners-section">
+      <div class="partner-container">
+        <h4 class="partner-title">In partnership with:</h4>
+        <img
+          class="partner-logo"
+          src="src/assets/images/general/fever-logo.svg"
+          alt="Los pollos hermanos logo"
+        />
+      </div>
+      <div class="partner-container">
+        <h4 class="partner-title">Event by:</h4>
+        <img
+          class="partner-logo"
+          src="src/assets/images/header/lph-logo.png"
+          alt="Los pollos hermanos logo"
+        />
+      </div>
+    </section>
+
+    <footer class="footer-container">
+      <img
+        class="footer-image"
+        src="src/assets/images/footer/footer-bg.jpg"
+        alt="Los pollos hermanos logo"
+      />
+      <h4 class="footer-text">
+        © 2022 LPH / Los pollos hermanos. All Rights Reserved. Los Pollos
+        Hermanos is an original license. Privacy policy
+      </h4>
+    </footer>
+
+    <!-- Do not edit below this line -->
+    <script type="module" src="/src/main.js"></script>
+
+    <!-- linking SwiperJs script -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  </body>
+</html>
